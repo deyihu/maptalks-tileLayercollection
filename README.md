@@ -2,6 +2,7 @@ this is TileLayer collection
 
 Contain Tdt(天地图)，AMap(高德地图)，Geoq(智图)，Google，Tencent(腾讯),Osm,CartoDb,Mapbox
 
+[demo](https://deyihu.github.io/src/maptalks-tileLayercollection/examples/)
 
 
 example code
