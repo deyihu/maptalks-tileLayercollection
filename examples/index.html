@@ -1,96 +1,104 @@
-
 <!DOCTYPE html>
 <html>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>tileLayers</title>
-  <style type="text/css">
-    html,body{margin:0px;height:100%;width:100%}
-    #map{width:100%;height:100%}
-  
-  </style>
-  <link href="https://v3.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tileLayers</title>
+<style type="text/css">
+  html,
+  body {
+    margin: 0px;
+    height: 100%;
+    width: 100%
+  }
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maptalks@0.39.0/dist/maptalks.css">
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/maptalks@0.39.0/dist/maptalks.min.js"></script>
+  #map {
+    width: 100%;
+    height: 100%
+  }
+</style>
+<link href="https://v3.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.min.js"></script>
 
 
-  <script type="text/javascript" src="../dist/maptalks-tileLayercollection.js"></script>
+<script type="text/javascript" src="../dist/maptalks-tileLayercollection.js"></script>
 
-  <body>
+<body>
 
-      <div class="btn-group" id='layerGroup' role="group" aria-label="..." style="position:fixed;top:0px;left:0xp;z-index:2000;">
-          <!-- <button type="button" class="btn btn-default">Left</button>
+  <div class="btn-group" id='layerGroup' role="group" aria-label="..."
+    style="position:fixed;top:0px;left:0xp;z-index:2000;">
+    <!-- <button type="button" class="btn btn-default">Left</button>
           <button type="button" class="btn btn-default">Middle</button>
           <button type="button" class="btn btn-default">Right</button> -->
-      </div>
+  </div>
 
 
-    <div id="map" class=""></div>
+  <div id="map" class=""></div>
 
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script>
-
-     
-
-        var id='helle-world-layer';
-
-        var names=[
-          'Tdt-Normal','Tdt-Satellite','Tdt-Terrain',
-          'Geoq-Colour','Geoq-Gray','Geoq-Midnightblue',
-          'Google-Normal','Google-Satellite',
-          'Amap-Normal','Amap-Satellite',
-          'Tencent-Normal','Tencent-Satellite','Tencent-Terrain',
-          'Osm-Normal','Osm-Bike','Osm-Transport','Osm-Humanitarian',
-          'CartoDb-Light','CartoDb-Dark',
-          'Mapbox-Streets','Mapbox-Dark','Mapbox-LightDark','Mapbox-Satellite','Mapbox-Light',
-          'Mapbox-Emerald','Mapbox-White','Mapbox-Red','Mapbox-Outdoors','Mapbox-StreetsSatellite',
-          'Mapbox-Comic','Mapbox-Building'
-        ];
-
-        var tileLayers={
-
-        }
-
-        for(var i=0;i<names.length;i++){
-            var name=names[i];
-            var nameArr=name.split('-');
-            var methodName='get'+nameArr[0]+'TileLayer';
-            var style=nameArr[1];
-
-            var baseLayer=maptalks.TileLayerCollection[methodName](id+i,{style:style});
-            tileLayers[name]=baseLayer;
-        }
-
-        var html='';
-        for(var i=0;i<names.length;i++){
-            var name=names[i]
-            var h='    <button type="button" class="btn btn-default" data-name="'+name+'">'+name+'</button>'
-            html+=h;
-        }
-        $('#layerGroup').html(html)
-
-      
-
-        var map = new maptalks.Map('map', {
-          center: [120,31.49856],
-          zoom: 8
-        });
-
-
-      map.on('click',function(e){
-          console.log(map.getZoom())
-      })
-
-      map.setBaseLayer(tileLayers[names[0]])
+  <script>
 
 
 
+    var id = 'helle-world-layer';
 
-      // var tileLayer=maptalks.TileLayerCollection.getTdtTileLayer(id,{style:'Terrain'});
-      // map.setBaseLayer(tileLayer)
+    var names = [
+      'Tdt-Normal', 'Tdt-Satellite', 'Tdt-Terrain',
+      'Geoq-Colour', 'Geoq-Gray', 'Geoq-Midnightblue',
+      'Google-Normal', 'Google-Satellite',
+      'Amap-Normal', 'Amap-Satellite',
+      'Tencent-Normal', 'Tencent-Satellite', 'Tencent-Terrain',
+      'Osm-Normal', 'Osm-Bike', 'Osm-Transport', 'Osm-Humanitarian',
+      'CartoDb-Light', 'CartoDb-Dark',
+      'Mapbox-Streets', 'Mapbox-Dark', 'Mapbox-LightDark', 'Mapbox-Satellite', 'Mapbox-Light',
+      'Mapbox-Emerald', 'Mapbox-White', 'Mapbox-Red', 'Mapbox-Outdoors', 'Mapbox-StreetsSatellite',
+      'Mapbox-Comic', 'Mapbox-Building'
+    ];
+
+    var tileLayers = {
+
+    }
+
+    for (var i = 0; i < names.length; i++) {
+      var name = names[i];
+      var nameArr = name.split('-');
+      var methodName = 'get' + nameArr[0] + 'TileLayer';
+      var style = nameArr[1];
+
+      var baseLayer = maptalks.TileLayerCollection[methodName](id + i, { style: style });
+      tileLayers[name] = baseLayer;
+    }
+
+    var html = '';
+    for (var i = 0; i < names.length; i++) {
+      var name = names[i]
+      var h = '    <button type="button" class="btn btn-default" data-name="' + name + '">' + name + '</button>'
+      html += h;
+    }
+    $('#layerGroup').html(html)
+
+
+
+    var map = new maptalks.Map('map', {
+      center: [120, 31.49856],
+      zoom: 8
+    });
+
+
+    map.on('click', function (e) {
+      console.log(map.getZoom())
+    })
+
+    map.setBaseLayer(tileLayers[names[0]])
+
+
+
+
+    // var tileLayer=maptalks.TileLayerCollection.getTdtTileLayer(id,{style:'Terrain'});
+    // map.setBaseLayer(tileLayer)
 
     //    var tileLayer1=maptalks.TileLayerCollection.getGeoqTileLayer({style:'Riversystem'});
     //   map.setBaseLayer(tileLayer1) 
@@ -100,8 +108,8 @@
 
 
 
-      // var tileLayer1=maptalks.TileLayerCollection['getAmapTileLayer']({style:'Normal'});
-      // map.setBaseLayer(tileLayer1) 
+    // var tileLayer1=maptalks.TileLayerCollection['getAmapTileLayer']({style:'Normal'});
+    // map.setBaseLayer(tileLayer1) 
 
 
     //   var tileLayer1=maptalks.TileLayerCollection.getTencentTileLayer({style:'Terrain'});
@@ -120,19 +128,20 @@
     //   map.setBaseLayer(tileLayer1) 
 
 
-      function switchTileLayer(){
-           $('#layerGroup .btn').on('click',function(e){
-              console.log(this.dataset.name);
-              map.removeBaseLayer(map.getBaseLayer())
-              map.setBaseLayer(tileLayers[this.dataset.name])
-           });
-        }
+    function switchTileLayer() {
+      $('#layerGroup .btn').on('click', function (e) {
+        console.log(this.dataset.name);
+        map.removeBaseLayer(map.getBaseLayer())
+        map.setBaseLayer(tileLayers[this.dataset.name])
+      });
+    }
 
-     switchTileLayer();
+    switchTileLayer();
 
-  
-      
 
-    </script>
-  </body>
+
+
+  </script>
+</body>
+
 </html>
