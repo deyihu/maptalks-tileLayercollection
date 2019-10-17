@@ -117,28 +117,29 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var mapboxKey = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejh2N21nMzAxMmQzMnA5emRyN2lucW0ifQ.jSE-g2vsn48Ry928pqylcg';
+var tdtKey = 'fb1bfb9e06cd7681813a42f4c934e1ea';
 
 var params = {
     TDT: {
         Normal: {
-            url: 'http://t0.tianditu.cn/DataServer?T=vec_w&X={x}&Y={y}&L={z}'
+            url: 'http://t0.tianditu.gov.cn/DataServer?T=vec_w&X={x}&Y={y}&L={z}&tk=' + tdtKey
         },
         Normal_Label: {
-            url: 'http://t0.tianditu.cn/DataServer?T=cva_w&X={x}&Y={y}&L={z}'
+            url: 'http://t0.tianditu.gov.cn/DataServer?T=cva_w&X={x}&Y={y}&L={z}&tk=' + tdtKey
         },
         Satellite: {
-            url: 'http://t0.tianditu.cn/DataServer?T=img_w&X={x}&Y={y}&L={z}'
+            url: 'http://t0.tianditu.gov.cn/DataServer?T=img_w&X={x}&Y={y}&L={z}&tk=' + tdtKey
         },
         Satellite_Label: {
-            url: 'http://t0.tianditu.cn/DataServer?T=cia_w&X={x}&Y={y}&L={z}'
+            url: 'http://t0.tianditu.gov.cn/DataServer?T=cia_w&X={x}&Y={y}&L={z}&tk=' + tdtKey
         },
 
         Terrain: {
-            url: 'http://t0.tianditu.cn/DataServer?T=ter_w&X={x}&Y={y}&L={z}'
+            url: 'http://t0.tianditu.gov.cn/DataServer?T=ter_w&X={x}&Y={y}&L={z}&tk=' + tdtKey
         },
 
         Terrain_Label: {
-            url: 'http://t0.tianditu.cn/DataServer?T=cta_w&X={x}&Y={y}&L={z}'
+            url: 'http://t0.tianditu.gov.cn/DataServer?T=cta_w&X={x}&Y={y}&L={z}&tk=' + tdtKey
         }
     },
     GEOQ: {
