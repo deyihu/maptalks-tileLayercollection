@@ -11,7 +11,7 @@ const product = process.env.NODE_ENV.trim() === 'prd';
 const FILEMANE = (product ? pkg.name + '.min' : pkg.name);
 const sourceMap = (product ? false : true);
 
-const banner = `/*\n * ${pkg.name} v${pkg.version}\n * this is extends maptalks.js \n * build by Iverson.hu \n*/\n`;
+const banner = `/*\n * ${pkg.name} v${pkg.version}\n * this is extends maptalks.js \n * build by deyihu \n*/\n`;
 
 const plugins = [
     json(),

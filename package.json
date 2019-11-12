@@ -1,19 +1,22 @@
 {
-  "name": "maptalks-tileLayercollection",
+  "name": "maptalks-tilelayercollection",
   "version": "0.0.1",
-  "description": ".",
-  "main": "dist/maptalks-tileLayercollection.js",
-  "module": "dist/maptalks-tileLayercollection.es.js",
+  "description": "a tilelayer collection",
+  "main": "dist/maptalks-tilelayercollection.js",
+  "module": "dist/maptalks-tilelayercollection.es.js",
   "scripts": {
     "build": "cross-env NODE_ENV=dev  rollup -c",
     "mini": "cross-env NODE_ENV=prd  rollup -c",
-    "dist": "npm run build && npm run publish",
+    "dist": "npm run build && npm run mini",
     "lint": "eslint src/**/*.js"
   },
   "repository": {
-    "type": "github",
+    "type": "git",
     "url": "https://github.com/deyihu/maptalks-tileLayercollection.git"
   },
+  "keywords": [
+    "tilelayer","googletilelayer","mapboxtilelayer","maptalks","maptalks plugin"
+  ],
   "author": "deyihu",
   "devDependencies": {
     "@babel/core": "^7.2.2",
