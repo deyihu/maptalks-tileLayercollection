@@ -1,5 +1,5 @@
-const mapboxKey = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejh2N21nMzAxMmQzMnA5emRyN2lucW0ifQ.jSE-g2vsn48Ry928pqylcg'
-const tdtKey = 'fb1bfb9e06cd7681813a42f4c934e1ea'
+const mapboxKey = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejh2N21nMzAxMmQzMnA5emRyN2lucW0ifQ.jSE-g2vsn48Ry928pqylcg';
+const tdtKey = 'fb1bfb9e06cd7681813a42f4c934e1ea';
 
 const params = {
     TDT: {
@@ -49,30 +49,30 @@ const params = {
             url: 'http://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}'
         },
         Satellite: {
-            url: "http://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}"
+            url: 'http://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}'
         },
         Satellite_Label: {
-            url: "http://webst01.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}"
+            url: 'http://webst01.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}'
         }
     },
     Tencent: {
         Normal: {
-            url: "http://rt0.map.gtimg.com/realtimerender?z={z}&x={x}&y={y}&type=vector&style=0",
+            url: 'http://rt0.map.gtimg.com/realtimerender?z={z}&x={x}&y={y}&type=vector&style=0'
 
         },
         Satellite: {
-            url: "http://p0.map.gtimg.com/sateTiles/{z}/{m}/{n}/{x}_{y}.jpg",
+            url: 'http://p0.map.gtimg.com/sateTiles/{z}/{m}/{n}/{x}_{y}.jpg'
 
         },
         Satellite_Label: {
-            url: "http://rt3.map.gtimg.com/tile?z={z}&x={x}&y={y}&type=vector&styleid=3&version=117"
+            url: 'http://rt3.map.gtimg.com/tile?z={z}&x={x}&y={y}&type=vector&styleid=3&version=117'
         },
         Terrain: {
-            url: "http://p0.map.gtimg.com/demTiles/{z}/{m}/{n}/{x}_{y}.jpg"
+            url: 'http://p0.map.gtimg.com/demTiles/{z}/{m}/{n}/{x}_{y}.jpg'
         },
         Terrain_Label: {
-            url: "http://rt3.map.gtimg.com/tile?z={z}&x={x}&y={y}&type=vector&styleid=3&version=117"
-        },
+            url: 'http://rt3.map.gtimg.com/tile?z={z}&x={x}&y={y}&type=vector&styleid=3&version=117'
+        }
     },
     Osm: {
         Normal: {
@@ -134,6 +134,6 @@ const params = {
             url: 'https://b.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png'
         }
     }
-}
+};
 
 export default params;

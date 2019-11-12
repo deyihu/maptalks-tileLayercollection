@@ -1,13 +1,11 @@
+import BaseTileLayer from './BaseTileLayer';
+import params from './../param';
 
-
-import BaseTileLayer from "./BaseTileLayer";
-import params from "./../param"
-
-class MapboxTileLayer extends BaseTileLayer{
-    constructor(id,options={}){
-        var style=options.style||'light'
-        options.urlTemplate=params.Mapbox[style].url;
-        super(id,options);
+class MapboxTileLayer extends BaseTileLayer {
+    constructor(id, options = {}) {
+        const style = options.style || 'light';
+        options.urlTemplate = params.Mapbox[style].url;
+        super(id, options);
     }
 }
 

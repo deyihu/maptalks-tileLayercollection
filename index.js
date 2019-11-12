@@ -1,5 +1,6 @@
-import TileLayerCollection from "./src/TileLayerCollection"
+import TileLayerCollection from './src/TileLayerCollection';
 
-if(!window.maptalks) throw new Error('not find maptalks lib');
+export {
+    TileLayerCollection
+}
 
-window.maptalks.TileLayerCollection=TileLayerCollection

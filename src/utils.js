@@ -1,13 +1,10 @@
 const CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
 
+class Utils {
 
-class Utils{
-    constructor(){
-
-    }
-
-    static uuid(prefix = 'ID'){
-        let uuid = new Array(36), rnd = 0, r;
+    static uuid(prefix = 'ID') {
+        const uuid = new Array(36);
+        let rnd = 0, r;
         for (let i = 0; i < 36; i++) {
             if (i === 8 || i === 13 || i === 18 || i === 23) {
                 uuid[i] = '-';
