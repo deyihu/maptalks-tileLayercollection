@@ -6,7 +6,7 @@
   "module": "dist/maptalks-tileLayercollection.es.js",
   "scripts": {
     "build": "cross-env NODE_ENV=dev  rollup -c",
-    "publish": "cross-env NODE_ENV=prd  rollup -c",
+    "mini": "cross-env NODE_ENV=prd  rollup -c",
     "dist": "npm run build && npm run publish",
     "lint": "eslint src/**/*.js"
   },
